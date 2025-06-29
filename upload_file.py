@@ -26,6 +26,9 @@ def lambda_handler(event, context):
             'body': f"Invalid request"
         }
 
+    if not directory.endswith("/"):
+        directory += "/"
+
     content = base64.b64decode(raw_content) 
 
     try:

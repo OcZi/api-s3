@@ -28,6 +28,8 @@ def lambda_handler(event, context):
 
     if not directory.endswith("/"):
         directory += "/"
+    
+    directory += file_name
 
     content = base64.b64decode(raw_content) 
 

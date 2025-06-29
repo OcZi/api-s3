@@ -36,7 +36,7 @@ def lambda_handler(event, context):
         )
         return {
             'statusCode': 200,
-            'body': f"Directorio '{directory}' creado en bucket '{bucket_name}'."
+            'body': f"Archivo '{file_name}' creado en '{directory}' bajo el bucket '{bucket_name}'."
         }
     except Exception as e:
         return {

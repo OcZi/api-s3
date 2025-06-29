@@ -20,7 +20,7 @@ def lambda_handler(event, context):
     file_name = body.get("filename")
     raw_content = body.get("content")
 
-    if not bucket_name or not directory or not file_name or not content:
+    if not bucket_name or not directory or not file_name or not raw_content:
         return {
             'statusCode': 500,
             'body': f"Invalid request"

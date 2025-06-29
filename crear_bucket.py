@@ -14,7 +14,7 @@ def load_body(event):
 
 def lambda_handler(event, context):
     body = load_body(event)
-    bucket_name = body.get["bucket"]
+    bucket_name = body.get("bucket")
 
     if not bucket_name:
         return {

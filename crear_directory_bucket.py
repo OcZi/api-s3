@@ -23,6 +23,9 @@ def lambda_handler(event, context):
             'body': f"Invalid request"
         }
 
+    if not directory.endswith("/"):
+        directory += "/"
+
     try:
         boto3.client('s3').put_object(
             Bucket=bucket_name,
